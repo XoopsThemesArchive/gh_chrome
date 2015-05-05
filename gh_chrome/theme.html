@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="www.gooberhead.net" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="Xoops" />
+<META HTTP-EQUIV="imagetoolbar" CONTENT="no">
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>" />
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+</head>
+<body>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="7"><img src="<{$xoops_imageurl}>topleft.jpg" width="7" height="100"></td>
+    <td width="50%" background="<{$xoops_imageurl}>topfirstbg.jpg"></td>
+    <td width="349"><a href="<{$xoops_url}>/"><img src="<{$xoops_imageurl}>logo.jpg" width="349" height="100" alt="<{$xoops_sitename}>"></td>
+    <td width="50%" background="<{$xoops_imageurl}>top2ndbg.jpg"></td>
+    <td width="13"><img src="<{$xoops_imageurl}>topright.jpg" width="13" height="100"></td>
+  </tr>
+</table><br>
+
+  <table cellspacing="0">
+    <tr>
+      <td id="leftcolumn" valign="top">
+        <!-- Start left blocks loop -->
+        <{foreach item=block from=$xoops_lblocks}>
+          <{include file="gh_chrome/theme_blockleft.html"}>
+        <{/foreach}>
+        <!-- End left blocks loop -->
+
+      </td>
+
+      <td id="centercolumn" width="100%" valign="top">
+
+        <!-- Display center blocks if any -->
+        <{if $xoops_showcblock == 1}>
+
+        <table cellspacing="0" width="100%">
+          <tr>
+            <td id="centerCcolumn" colspan="2" width="100%" valign="top">
+
+            <!-- Start center-center blocks loop -->
+            <{foreach item=block from=$xoops_ccblocks}>
+              <{include file="gh_chrome/theme_blockcenter_c.html"}>
+            <{/foreach}>
+            <!-- End center-center blocks loop -->
+
+            </td>
+          </tr>
+          <tr>
+            <td id="centerLcolumn">
+
+            <!-- Start center-left blocks loop -->
+              <{foreach item=block from=$xoops_clblocks}>
+                <{include file="gh_chrome/theme_blockcenter_l.html"}>
+              <{/foreach}>
+            <!-- End center-left blocks loop -->
+
+            </td><td id="centerRcolumn" valign="top">
+
+            <!-- Start center-right blocks loop -->
+              <{foreach item=block from=$xoops_crblocks}>
+                <{include file="gh_chrome/theme_blockcenter_r.html"}>
+              <{/foreach}>
+            <!-- End center-right blocks loop -->
+
+            </td>
+          </tr>
+        </table>
+
+        <{/if}>
+        <!-- End display center blocks -->
+
+        <div id="content">
+          <{$xoops_contents}>
+        </div>
+      </td>
+
+      <{if $xoops_showrblock == 1}>
+
+      <td id="rightcolumn" valign="top">
+        <!-- Start right blocks loop -->
+        <{foreach item=block from=$xoops_rblocks}>
+          <{include file="gh_chrome/theme_blockright.html"}>
+        <{/foreach}>
+        <!-- End right blocks loop -->
+      </td>
+
+      <{/if}>
+
+    </tr>
+  </table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<center><img src="<{$xoops_imageurl}>/pointer.gif"><a href="<{$xoops_url}>/"><{$xoops_sitename}> - <{$xoops_pagetitle}></a><a href="www.gooberhead.net"><img src="<{$xoops_imageurl}>/pointer2.gif"></a><br>
+All trademarks used are properties of their respective owners. All rights reserved. <br>
+<{$xoops_meta_copyright}> by <a href="<{$xoops_url}>/"><{$xoops_sitename}></a><br> 
+Administration by <{$xoops_sitename}><br><small><Script Language='Javascript'>
+<!--
+document.write(unescape('%20%20%20%20%20%20%20%54%68%65%6D%65%20%62%79%3A%20%3C%61%20%68%72%65%66%3D%22%68%74%74%70%3A%2F%2F%77%77%77%2E%67%6F%6F%62%65%72%68%65%61%64%2E%6E%65%74%22%3E%47%6F%6F%62%65%72%68%65%61%64%3C%2F%61%3E%20%20%20'));
+//-->
+</Script></small></center>
+
+</body>
+</html>
